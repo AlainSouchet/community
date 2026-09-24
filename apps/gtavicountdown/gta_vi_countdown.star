@@ -58,7 +58,6 @@ mVROdZzuJmgFD4o7N/n42hDwllD+Anjvdyzf0PG83BfTx/pmnHTPudOXFWu2ulJhsH0pYk9sl4td/dbo
 ASyJbV3w4vTs7aTI2JBxP78hMn5bkoPjsnXh98X+JnCCOkEgGoi+19vT98of7PgzbQUqQEDckhrsGyHm
 qTyULKO+IrPAksgS0qkML724H+3z3+9e4RSyZFIZ/hdKH9H606le0QAAAABJRU5ErkJggg==""")
 
-
 def _day_number(year, month, day):
     """Gregorian civil-day number, independent of daylight saving time."""
     if month <= 2:
@@ -70,12 +69,10 @@ def _day_number(year, month, day):
     day_in_era = year_in_era * 365 + year_in_era // 4 - year_in_era // 100 + day_in_year
     return era * 146097 + day_in_era
 
-
 def _remaining_days(iso_date):
     current = _day_number(int(iso_date[:4]), int(iso_date[5:7]), int(iso_date[8:10]))
     release = _day_number(RELEASE_DATE[0], RELEASE_DATE[1], RELEASE_DATE[2])
     return release - current
-
 
 def main(config):
     location = config.get("location")
@@ -121,7 +118,6 @@ def main(config):
             ),
         ),
     )
-
 
 def get_schema():
     return schema.Schema(
