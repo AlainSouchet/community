@@ -4,11 +4,11 @@ Release date announced by Rockstar Games: November 19, 2026.
 The countdown uses the viewer's local calendar date when a location is set.
 """
 
-load("render.star", "render")
-load("time.star", "time")
 load("encoding/base64.star", "base64")
 load("encoding/json.star", "json")
+load("render.star", "render")
 load("schema.star", "schema")
+load("time.star", "time")
 
 RELEASE_DATE = (2026, 11, 19)
 DEFAULT_TIMEZONE = "Europe/Paris"
